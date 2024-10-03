@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { EmailPage } from './emails/components/EmailPage';
+import { EmailPage } from './components/emails/EmailPage';
 
 function App() {
   return (
