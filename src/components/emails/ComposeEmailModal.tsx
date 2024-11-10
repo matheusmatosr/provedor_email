@@ -34,10 +34,10 @@ const ComposeEmailModal: React.FC<ComposeEmailModalProps> = ({ isOpen, onClose }
       <ModalContent
         bg="white"
         width="450px"
-        height="400px"
+        height="350px"
         position="fixed"
-        bottom="-10"
-        right="5"
+        bottom="15"
+        right="15"
         boxShadow="0px 4px 10px rgba(0, 0, 0, 0.1)"
         border="1px rgba(242, 45, 45, 0.373) solid"
         borderRadius="20px"
@@ -53,7 +53,7 @@ const ComposeEmailModal: React.FC<ComposeEmailModalProps> = ({ isOpen, onClose }
           fontFamily="sans-serif"
           fontSize="17px"
         >
-          <Text fontSize="lg">Escrever email</Text>
+          <Text fontSize="lg" fontWeight="bold">Escrever email</Text>
         </ModalHeader>
         <ModalBody>
           <HStack borderBottom="1 px solid black">
@@ -98,7 +98,7 @@ const ComposeEmailModal: React.FC<ComposeEmailModalProps> = ({ isOpen, onClose }
             />
           </HStack>
         </ModalBody>
-        <ModalFooter justifyContent="flex-start">
+        <ModalFooter justifyContent="flex-start" marginTop="10px"> 
           <Button  
             mr={3} 
             onClick={handleSend}  

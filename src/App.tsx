@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import { EmailPage } from './components/emails/EmailPage';
+import { EmailPage } from './pages/EmailPage';
 
 function App() {
   return (

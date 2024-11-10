@@ -10,11 +10,11 @@ const SidebarEmail: React.FC<SidebarProps> = ({ onComposeClick, onSentEmailsClic
   return (
     <Box
       w="250px"
-      height="700px"
       bg="gray.100"
       p={4}
-      border="2px rgba(242, 45, 45, 0.373) solid"
+      border="2px rgba(12, 12, 12, 0.373) solid"
       boxShadow="0 0 10px rgba(0, 0, 0, 0.2)"
+      backgroundColor="#c6c5c585"
       borderRadius="10px 0px 0px 10px"
       margin="auto"
       marginRight="0px"

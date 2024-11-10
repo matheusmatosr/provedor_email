@@ -13,12 +13,10 @@ import {
   Checkbox,
   VStack
 } from '@chakra-ui/react';
-import Sidebar from './SidebarEmail';
-import ComposeEmailModal from './ComposeEmailModal';
-import EmailDetails from './EmailDetails';
-// import { DashboardHeader } from '@/features/dashboard/components/DashboardHeader';
-// import CustomSideBar from '@/components/SideBar';
-import { Email } from '../types';
+import Sidebar from '../components/emails/SidebarEmail';
+import ComposeEmailModal from '../components/emails/ComposeEmailModal';
+import EmailDetails from '../components/emails/EmailDetails';
+import { Email } from '../components/types';
 
 export const EmailPage: React.FC = () => {
   const [isComposeModalOpen, setComposeModalOpen] = useState<boolean>(false);
@@ -95,6 +93,36 @@ export const EmailPage: React.FC = () => {
       time: '2:30 PM',
       content: 'A implementação desses novos procedimentos é um passo importante para melhorar nossa eficiência e a qualidade do nosso trabalho.',
     },
+    {
+      "id": 4,
+      "sender": "Robert Williams",
+      "from": "robertwilliams@email.com",
+      "to": "devteam@email.com",
+      "avatar": "https://bit.ly/prosper-baba",
+      "subject": "Novo projeto em andamento",
+      "time": "10:00 AM",
+      "content": "Gostaria de atualizar todos sobre o novo projeto que estamos começando..."
+    },
+    {
+      "id": 5,
+      "sender": "Emily Brown",
+      "from": "emilybrown@email.com",
+      "to": "devteam@email.com",
+      "avatar": "https://bit.ly/sage-adebayo",
+      "subject": "Ideias para otimização do sistema",
+      "time": "11:15 AM",
+      "content": "Tenho algumas ideias sobre como podemos otimizar o sistema para melhorar a performance..."
+    },
+    {
+      "id": 6,
+      "sender": "Michael Thompson",
+      "from": "michaelthompson@email.com",
+      "to": "devteam@email.com",
+      "avatar": "https://bit.ly/code-beast",
+      "subject": "Documentação atualizada disponível",
+      "time": "3:45 PM",
+      "content": "A documentação do sistema foi atualizada com as novas funcionalidades..."
+    }
   ];
   
   const filteredEmails = emailList.filter((email) =>
@@ -105,7 +133,7 @@ export const EmailPage: React.FC = () => {
   return (
     <VStack>
       {/* <DashboardHeader /> */}
-      <Flex w="100%" px={4}>
+      <Flex w="100%" h="100vh" px={4}>
         {/* 
         <CustomSideBar />
         */}
@@ -117,9 +145,8 @@ export const EmailPage: React.FC = () => {
           p={4} 
           maxW="container.lg" 
           mx="auto" 
-          h="700px"
           flex="1" 
-          border="2px solid rgba(242, 45, 45, 0.373)"
+          border="2px solid rgba(12, 12, 12, 0.373)"
           borderLeft="none"
           borderRadius="0px 10px 10px 0px"
           marginLeft="0px"
@@ -132,7 +159,7 @@ export const EmailPage: React.FC = () => {
           ) : (
             <>
               <InputGroup mb={4} w="98%" h="35px" cursor="pointer" margin="10px">
-                <InputLeftElement pointerEvents="none" margin="0px">
+                <InputLeftElement pointerEvents="none" marginTop="10px" marginLeft="10px">
                   <svg fill="gray" width="16" height="16" viewBox="0 0 24 24"><path d="M10 2a8 8 0 015.29 13.29l4.58 4.58a1 1 0 01-1.42 1.42l-4.58-4.58A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z" /></svg>
                 </InputLeftElement>
                 <Input
